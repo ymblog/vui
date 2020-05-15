@@ -3,38 +3,38 @@
     <div class="menu">
       <ul>
         <li>
-          <a href="" target="_blank">项目地址</a>
+          <a href="https://github.com/ymblog/vui" target="_blank">项目地址</a>
         </li>
         <li>
-          <router-link to="/">uButton 按钮</router-link>
+          <router-link to="/">button 按钮</router-link>
         </li>
         <li>
           <!-- <input readonly placeholder="00"/> -->
-          <router-link to="/input">uInpit 按钮</router-link>
+          <router-link to="/input">Input 按钮</router-link>
         </li>
         <li>
-          <router-link to="/countdown">uCountdown 倒计时</router-link>
+          <router-link to="/countdown">countdown 倒计时</router-link>
         </li>
         <li>
-          <router-link to="/form">uForm 按钮</router-link>
+          <router-link to="/form">form 按钮</router-link>
         </li>
         <li>
-          <router-link to="/message">uMessage 全局提示</router-link>
+          <router-link to="/message">message 全局提示</router-link>
         </li>
         <li>
-          <router-link to="/select">uSelect 选择器</router-link>
+          <router-link to="/select">select 选择器</router-link>
         </li>
         <li>
-          <router-link to="/tooltip">uTooltip  选择器</router-link>
+          <router-link to="/tooltip">tooltip  选择器</router-link>
         </li>
         <li>
-          <router-link to="/modal">uModal 弹窗</router-link>
+          <router-link to="/modal">modal 弹窗</router-link>
         </li>
         <li>
-          <router-link to="/table">uTable 表格</router-link>
+          <router-link to="/table">table 表格</router-link>
         </li>
         <li>
-          <router-link to="/checkout">ucheckout 多选框</router-link>
+          <router-link to="/checkout">checkout 多选框</router-link>
         </li>
         <li>
           <router-link to="/switch">switch 开关</router-link>
