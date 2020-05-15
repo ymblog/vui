@@ -1,0 +1,192 @@
+.u-message {
+  font-size: 14px;
+  position: fixed;
+  z-index: 1010;
+  width: 100%;
+  top: 16px;
+  left: 0;
+  pointer-events: none;
+}
+
+.u-message-notice {
+  padding: 8px;
+  text-align: center;
+  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.u-message-notice:first-child {
+  margin-top: -8px;
+}
+
+.u-message-notice-close {
+  position: absolute;
+  right: 4px;
+  top: 10px;
+  color: #999;
+  outline: 0;
+}
+
+.u-message-notice-close i.u-icon {
+  font-size: 22px;
+  color: #999;
+  transition: color 0.2s ease;
+  position: relative;
+  top: -3px;
+}
+
+.u-message-notice-close i.u-icon:hover {
+  color: #444;
+}
+
+.u-message-notice-content {
+  display: inline-block;
+  pointer-events: all;
+  padding: @message-padding;
+  border-radius: @message-radius;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  background: @message-bg;
+  position: relative;
+}
+
+.u-message-notice-content-text {
+  display: inline-block;
+}
+
+.u-message-notice-closable .u-message-notice-content-text {
+  padding-right: 32px;
+}
+
+.u-message-success .u-icon {
+  color: #19be6b;
+}
+
+.u-message-error .u-icon {
+  color: #ed4014;
+}
+
+.u-message-warning .u-icon {
+  color: #f90;
+}
+
+.u-message-info .u-icon,
+.u-message-loading .u-icon {
+  color: #2d8cf0;
+}
+
+.u-message .u-icon {
+  margin-right: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.u-message-custom-content span {
+  vertical-align: middle;
+  color: @message-color;
+  font-size: @message-size;
+}
+.move-up-appear,
+.move-up-enter-active,
+.move-up-leave-active {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.move-up-appear,
+.move-up-enter-active {
+  -webkit-animation-name: uMoveUpIn;
+  animation-name: uMoveUpIn;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.move-up-leave-active {
+  -webkit-animation-name: uMoveUpOut;
+  animation-name: uMoveUpOut;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.move-up-appear,
+.move-up-enter-active {
+  opacity: 0;
+}
+
+.move-up-appear,
+.move-up-enter-active,
+.move-up-leave-active {
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+@keyframes uMoveUpIn {
+  0% {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes uMoveUpIn {
+  0% {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes uMoveUpOut {
+  0% {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes uMoveUpOut {
+  0% {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}

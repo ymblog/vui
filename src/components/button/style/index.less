@@ -1,0 +1,194 @@
+.ui-bnt-shadow(@direction,@transparent) {
+  box-shadow: @direction rgba(0, 0, 0, @transparent);
+}
+.ui-bnt {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+
+  font-size: @bnt-default-font;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+
+  box-sizing: border-box;
+  span {
+    font-size: @bnt-default-size;
+    color: @bnt-default-font;
+  }
+  .ui-bnt-shadow("0 2px 0", 0.015);
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+
+  &:not([disabled]) {
+    &:hover {
+      text-decoration: none;
+      background: @hover-color;
+      border-color: @hover-color;
+    }
+    &:active {
+      outline: 0;
+      box-shadow: none;
+      background: @click-color;
+      border-color: @click-color;
+    }
+  }
+  .iconfont{
+    font-size:18px;
+    color: @bnt-loading-bg;
+    display: block;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1.5s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1.5s;
+    -webkit-animation: rotate 1.5s linear infinite;
+    -moz-animation: rotate 1.5s linear infinite;
+    -o-animation: rotate 1.5s linear infinite;
+    animation: rotate 1.5s linear infinite;
+  }
+  &.wait{
+    cursor: wait;
+  }
+
+}
+@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
+    to{-webkit-transform: rotate(360deg)}
+}
+@-moz-keyframes rotate{from{-moz-transform: rotate(0deg)}
+    to{-moz-transform: rotate(359deg)}
+}
+@-o-keyframes rotate{from{-o-transform: rotate(0deg)}
+    to{-o-transform: rotate(359deg)}
+}
+@keyframes rotate{from{transform: rotate(0deg)}
+    to{transform: rotate(359deg)}
+}
+.ui-bnt-primary {
+  color: @bnt-primary-font-default;
+  background-color: @essential-color;
+  border-color: @essential-color;
+  padding: @bnt-default-padding;
+  border-radius: @bnt-default-radius;
+  height: @bnt-default-height;
+  span {
+    color: @bnt-primary-font-default;
+  }
+  .ui-bnt-shadow(0 -1px 0, 0.12);
+  .ui-bnt-shadow(0 2px 0, 0.045);
+
+  &:not([disabled]) {
+    &:hover {
+      text-decoration: none;
+      background: @hover-color;
+      border-color: @hover-color;
+    }
+    &:active {
+      outline: 0;
+      box-shadow: none;
+      background: @click-color;
+      border-color: @click-color;
+    }
+  }
+}
+.ui-bnt-default {
+  color: @bnt-default-font;
+  background-color: @bnt-default-bg;
+  border-color: @bnt-default-border;
+  border-radius: @bnt-default-radius;
+  padding: @bnt-default-padding;
+  height: @bnt-default-height;
+}
+.ui-bnt-text {
+  background: @ui-bnt-text;
+  border: 0;
+  span {
+    color: @bnt-primary-font-default;
+  }
+  &:not([disabled]) {
+    &:hover {
+      text-decoration: none;
+      background: none;
+      border-color: none;
+      border: 0;
+      span {
+        color: @hover-color;
+      }
+    }
+    &:active {
+      outline: 0;
+      box-shadow: none;
+      background: none;
+      border-color: none;
+      border: 0;
+      span {
+        color: @click-color;
+      }
+    }
+  }
+}
+.ui-bnt-lg {
+  height: @bnt-large-height;
+  border-radius: @bnt-large-radius;
+  padding: @bnt-large-padding;
+
+  font-size: @bnt-large-size;
+}
+.ui-bnt-sm {
+  height: @bnt-small-height;
+  border-radius: @bnt-small-radius;
+  padding: @bnt-small-padding;
+  font-size: @bnt-small-size;
+}
+.ui-bnt-block {
+  width: 100%;
+  height: 100%;
+}
+
+.ui-countdown {
+  text-align: center;
+  display: inline-block;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+
+  &.ui-countdown-primary {
+    width: @countdown-width;
+    height: @countdown-height;
+    line-height: @countdown-height;
+    background: @countdown-bg;
+    border-radius: @countdown-radius;
+    font-size: @countdown-size;
+    color: @countdown-font;
+    padding: 0;
+    &:hover {
+      background: @countdown-hover-bg;
+    }
+    &:active {
+      background: @countdown-focus-bg;
+    }
+  }
+  &.ui-countdown-text{
+    min-width: 78px;
+    font-size: @countdown-text-size;
+    color: @countdown-text-font;
+    padding:5px 15px;
+    &:hover {
+      color: @countdown-hover-bg;
+    }
+    &:active {
+      color:@countdown-text-active-font;
+    }
+  }
+}

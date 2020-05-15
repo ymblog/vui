@@ -1,0 +1,44 @@
+
+
+.ui-countdown {
+  text-align: center;
+  display: inline-block;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  &.wait{
+    cursor: wait;
+  }
+  &.noDrop{
+    cursor: no-drop;
+  }
+  &.ui-countdown-primary {
+    width: @countdown-width;
+    height: @countdown-height;
+    line-height: @countdown-height;
+    background: @countdown-bg;
+    border-radius: @countdown-radius;
+    font-size: @countdown-size;
+    color: @countdown-font;
+    padding: 0;
+    &:hover {
+      background: @countdown-hover-bg;
+    }
+    &:active {
+      background: @countdown-focus-bg;
+    }
+  }
+  &.ui-countdown-text{
+    min-width: 78px;
+    font-size: @countdown-text-size;
+    color: @countdown-text-font;
+    padding:5px 15px;
+    &:hover {
+      color: @countdown-hover-bg;
+    }
+    &:active {
+      color:@countdown-text-active-font;
+    }
+  }
+}

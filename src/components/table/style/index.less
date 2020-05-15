@@ -1,0 +1,89 @@
+.ui-table {
+    width        : 100%;
+    display      : inline-table;
+    box-sizing   : border-box;
+    border       : 1px solid #EAEAEA;
+    position: relative;
+    .ui-table-thead {
+        width     : 100%;
+        background: #EAEAEA;
+
+        dl {
+            display: flex;
+
+            dt {
+                height     : 40px;
+                line-height: 40px;
+                font-size  : 12px;
+                padding    : 0 10px;
+            }
+        }
+    }
+
+    .ui-table-tbody {
+        .ui-table-loading{
+            display: inline-block;
+            i{
+                font-size: 30px;
+                color:  #CCCCCC;
+                position: absolute;
+                top:50%;
+                left: 50%;
+                margin: -15px 0 0 -15px;
+                &:before{
+                    transform-origin: center center;
+                    animation: rotate 1.2s linear infinite;
+                    display: block;
+                    height: 30px;
+                    width: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                }
+            }
+        }
+        .ui-table-noData{
+            display: inline-block;
+           i{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin: -60px 0 0 -60px;
+            color:  #CCCCCC;
+             font-size: 120px;
+           }
+        }
+        .ui-table-tr {
+            display      : flex;
+            height       : 44px;
+            line-height  : 44px;
+            border-bottom: 1px solid #EAEAEA;
+
+            .ui-table-td {
+                font-size: 12px;
+                padding  : 0 10px;
+            }
+
+        }
+
+        .ui-table-details {
+            background: #F1F1F1;
+            overflow  : hidden;
+        }
+
+        .ui-table-operation {
+            span {
+                cursor: pointer;
+            }
+        }
+
+        dl {
+            &:last-child {
+                dd {
+
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+}

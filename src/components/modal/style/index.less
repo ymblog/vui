@@ -1,0 +1,56 @@
+.ui-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+	justify-content: space-between;
+  align-items: center;
+  &>div{
+    margin: auto;
+    background: #fff;
+    border-radius: 2px;
+  }
+}
+
+.ui-modal-fade-enter-active {
+  animation: dialog-fade-in .3s
+}
+
+.ui-modal-fade-leave-active {
+  animation: dialog-fade-out .3s
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+@keyframes dialog-fade-in {
+  0% {
+      transform: translate3d(0,-20px,0);
+      opacity: 0
+  }
+
+  to {
+      transform: translateZ(0);
+      opacity: 1
+  }
+}
+
+
+@keyframes dialog-fade-out {
+  0% {
+      transform: translateZ(0);
+      opacity: 1
+  }
+
+  to {
+      transform: translate3d(0,-20px,0);
+      opacity: 0
+  }
+}
