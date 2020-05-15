@@ -2,7 +2,9 @@ const path = require("path");
 const markdownRender = require('markdown-it')();
 
 module.exports = {
-
+  publicPath:'./',
+  productionSourceMap: false,
+  parallel: false,
   chainWebpack: config => {
     config.module
       .rule('md')
