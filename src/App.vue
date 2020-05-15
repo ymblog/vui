@@ -10,7 +10,7 @@
         </li>
         <li>
           <!-- <input readonly placeholder="00"/> -->
-          <router-link to="/input">uInpit 按钮</router-link>
+          <router-link :to="{name:'input'}">uInpit 按钮</router-link>
         </li>
         <li>
           <router-link to="/countdown">uCountdown 倒计时</router-link>
